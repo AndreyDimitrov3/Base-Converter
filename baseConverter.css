@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.heading{
+    font-size: 20px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+.answer{
+    font-size: 24px;
+    margin-top: 24px;
+}
