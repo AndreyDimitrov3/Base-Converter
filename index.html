@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetics</title>
+    <link rel="stylesheet" href="baseConverter.css">
+</head>
+<body>
+    <p class="heading">Enter Number</p>
+    <input type="text" id="enterNumber" onkeypress="return isNumberKey(event);">
+
+    <p class="heading">From Base</p>
+    <input type="text" id="fromBase" onkeypress="return isNumberKey(event);">
+
+    <p class="heading">To Base</p>
+    <input type="text" id="toBase" onkeypress="return isNumberKey(event);">
+    <button id="search">Convert</button>
+
+    <p class="answer">Result: <span id="answer" style="font-weight: 700;"></span></p>
+
+    <script src="baseConverter.js"></script>
+</body>
+</html>
