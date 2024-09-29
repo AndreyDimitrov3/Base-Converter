@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arithmetics</title>
-    <link rel="stylesheet" href="baseConverter.css">
+    <link rel="stylesheet" href="baseConverterAndBinaryArithmetics.css">
 </head>
 <body>
+    <h1>Convert Bases</h1>
+    <button class="toggleArithmetics">Binary Arithmetics</button>
+
     <p class="heading">Enter Number</p>
     <input type="text" id="enterNumber" onkeypress="return isNumberKey(event);">
 
@@ -15,10 +18,34 @@
 
     <p class="heading">To Base</p>
     <input type="text" id="toBase" onkeypress="return isNumberKey(event);">
-    <button id="search">Convert</button>
+    <button class="resultButton" id="search">Convert</button>
 
     <p class="answer">Result: <span id="answer" style="font-weight: 700;"></span></p>
 
-    <script src="baseConverter.js"></script>
+    <div class="binaryArithmetics hidden" id="binaryArithmeticsPopup">
+        <h1>Binary Arithmetics</h1>
+        <button class="toggleArithmetics">Convert Bases</button>
+
+        <p class="heading">Number 1</p>
+        <input type="text" id="enterNumberArithmetics1" onkeypress="return isNumberKey(event);">
+
+        <form action="">
+            <input type="radio" name="operator" id="add" checked/>
+            <label for="add">Add</label>
+            <input type="radio" name="operator" id="subtract"/>
+            <label for="subtract">subtract</label>
+            <input type="radio" name="operator" id="multiply"/> 
+            <label for="multiply">Multiply</label>
+        </form>
+
+        <p class="heading">Number 2</p>
+        <input type="text" id="enterNumberArithmetics2" onkeypress="return isNumberKey(event);">
+        <button class="resultButton" id="convert">Convert</button>
+
+        <p class="answer">Result: <span id="answerArithmetics" style="font-weight: 700;"></span></p>
+    </div>
+
+    <script type="module" src="scripts/binaryArithmetics.js"></script>
+    <script src="scripts/onlyNumbers.js"></script>
 </body>
 </html>
